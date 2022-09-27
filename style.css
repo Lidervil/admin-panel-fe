@@ -1,0 +1,247 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+body {
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template: 1.05fr 1fr 1fr 1fr 1fr 1fr / 1.45fr 1fr 1fr 1fr 1fr 1.55fr ;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas: 'dashboard nav-n-profile nav-n-profile nav-n-profile nav-n-profile nav-n-profile'
+                        'dashboard content content content content anounc-trending'
+                        'dashboard content content content content anounc-trending'
+                        'dashboard content content content content anounc-trending'
+                        'dashboard content content content content anounc-trending'
+                        'dashboard content content content content anounc-trending';
+}
+
+.dashboard {
+    background-color: #1992D4;
+    grid-area: dashboard;
+    color: white;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.nav-top img {
+    height: 2rem;
+}
+
+.nav-bot img {
+    height:4rem;
+}
+
+.nav-bot {
+    display: flex;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.nav-text {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.nav-text p:nth-of-type(2){
+    font-size: 1.3rem;
+}
+
+.nav-text p{
+    font-weight: 600;
+    padding-left: 1rem;
+    margin: 0;
+}
+
+.mid, .bot {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.mid .box span, .bot .box span {
+    padding-left: 0.6rem;
+    font-size: 1.4rem;
+}
+.top .box span {
+    padding-left: 0.4rem;
+}
+
+.nav-n-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    grid-area: nav-n-profile;
+}
+
+.anounc-trending {
+    background-color: #E2E8F0;
+    grid-area: anounc-trending;
+}
+
+.nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    height: 1rem;
+    border-radius: 15px;
+    border: none;
+    background-color: #E2E8F0;
+    max-width: 25rem;
+}
+
+.top-box, .bot-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.top-box {
+    padding: 1rem;
+    max-width: 50rem;
+}
+
+.bot-box {
+    padding-right: 1rem;
+}
+
+.con-projects {
+    height: 77vh;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+}
+
+.cards {
+    background-color: white;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border-left: 10px solid orange;
+    /* box-shadow: inset 7px 0px 0px 0px rgb(253, 148, 0); */
+}
+
+.content {
+    background-color: #E2E8F0;
+    grid-area: content;/* 
+    height: max-content; */
+}
+
+.content .projects, 
+.trendingp, .anouncp {
+    padding: 1.5rem 1px 1px 1rem;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.cards h2 {
+    padding: 0;
+    margin: 0;
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+    margin-top: 1.5rem;
+}
+
+.cards p {
+    padding: 0;
+    margin: 0;
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+}
+
+.icons {
+    align-self: flex-end;
+    margin-top: auto;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.trending, .announc {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.announc {
+    gap: 0;
+    padding: 2rem;
+}
+
+.announc h3, .announc p{
+    margin: 0;
+    padding: 0;
+}
+
+.trencards {
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.trencards img {
+    height: 3rem;
+}
+
+.trencards p {
+    margin: 0;
+}
+
+#h3-bar {
+    margin-top: 0.5rem ;
+    padding-top: 0.5rem;
+    border-top: 1px solid hsl(214, 32%, 80%);
+}
+
+@media (min-width: 1000px) {
+    .top-box {
+    padding-right: 10rem;
+    }
+
+    input {
+        width: 50rem;
+    }
+}
+
+@media (max-width:570px) {
+    .bot-box {
+        position: absolute;
+        opacity: 0;
+    }
+
+    .dashboard .mid .box span, 
+    .dashboard .bot .box span,
+    .dashboard .top .box span,
+    .dashboard .top,
+    .dashboard .bot,
+    .dashboard .mid {
+        font-size: 0.5rem !important;
+    }
+
+    i {
+        position: absolute;
+        opacity: 0;
+    }
+}
